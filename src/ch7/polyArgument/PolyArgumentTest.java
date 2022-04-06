@@ -24,6 +24,7 @@ class Product {
     }
 
     Product() {
+        
     }
 }
 
