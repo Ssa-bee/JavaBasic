@@ -5,7 +5,13 @@ import static ch8.NewExceptionTest.enoughSpace;
 
 public class ChainedExceptionEx {
     public static void main(String[] args) {
-
+        try{
+            install();
+        }catch (InstallException e){
+            e.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     static void install() throws InstallException {
