@@ -9,7 +9,7 @@ public class QueueEx1 {
     public static void main(String[] args) {
         System.out.println("help를 입력하면 도움말을 볼 수 있습니다.");
         while(true){
-            System.out.println(">>");
+            System.out.print(">>");
             try{
                 Scanner s = new Scanner(System.in);
                 String input = s.nextLine().trim();
