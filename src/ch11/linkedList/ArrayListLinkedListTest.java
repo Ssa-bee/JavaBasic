@@ -3,7 +3,24 @@ package ch11.linkedList;
 import java.util.*;
 public class ArrayListLinkedListTest {
     public static void main(String[] args) {
-        List al = new ArrayList(2000000);
+        ArrayList al = new ArrayList(2000000);
+        LinkedList ll = new LinkedList();
+
+        System.out.println("=== 순차적으로 추가하기 ===");
+        System.out.println("ArrayList : " + add1(al));
+        System.out.println("LinkedList : " + add1(ll));
+        System.out.println();
+        System.out.println("=== 중간에 추가하기 ===");
+        System.out.println("ArrayList : " + add2(al));
+        System.out.println("LinkedList : " + add2(ll));
+        System.out.println();
+        System.out.println("=== 중간에서 삭제하기 ===");
+        System.out.println("ArrayList : " + remove2(al));
+        System.out.println("LinkedList : " + remove2(ll));
+        System.out.println();
+        System.out.println("=== 순차적으로 삭제하기 ===");
+        System.out.println("ArrayList : " + remove1(al));
+        System.out.println("LinkedList : " + remove1(ll));
     }
     public static long add1(List list){
         long start = System.currentTimeMillis();
