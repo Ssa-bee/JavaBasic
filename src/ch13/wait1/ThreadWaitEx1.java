@@ -1,4 +1,4 @@
-package ch13.wait;
+package ch13.wait1;
 
 import java.util.ArrayList;
 
