@@ -1,4 +1,4 @@
-package ch12.fruitEx1;
+package ch12.generics.fruitEx1;
 
 import java.util.ArrayList;
 

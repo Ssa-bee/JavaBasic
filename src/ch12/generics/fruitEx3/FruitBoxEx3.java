@@ -1,4 +1,4 @@
-package ch12.fruitEx3;
+package ch12.generics.fruitEx3;
 
 import java.util.*;
 
