@@ -4,7 +4,7 @@ import springbook.user.domain.User;
 
 import java.sql.*;
 
-public class UserDao {
+public class    UserDao {
     public void add(User user) throws ClassNotFoundException, SQLException {
         Connection c = getConnection();
         PreparedStatement ps = c.prepareStatement("INSERT INTO users(id, name, password) values(?, ?, ?)");
