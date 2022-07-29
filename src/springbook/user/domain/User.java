@@ -69,4 +69,13 @@ public class User {
     public User() {
 
     }
+
+    public void upgradeGrade(){
+        Grade nextGrade = this.grade.nextGrade();
+        if (nextGrade == null) {
+            throw new IllegalStateException(this.grade + "은 업그레이드가 불가능합니다.");
+        }else{
+            this.grade = nextGrade;
+        }
+    }
 }

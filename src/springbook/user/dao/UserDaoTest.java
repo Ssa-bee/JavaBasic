@@ -4,9 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -24,22 +22,16 @@ import static org.junit.Assert.assertThat;
 @ContextConfiguration(locations = "applicationContext.xml")
 @DirtiesContext
 public class UserDaoTest {
-//    @Autowired
-//    private ApplicationContext context;
     @Autowired
     private UserDao dao;
     @Autowired
     DataSource dataSource;
-
-    private JdbcContext jdbcContext;
     private User user1;
     private User user2;
     private User user3;
 
     @Before
     public void setUp(){
-//        this.dao = this.context.getBean("userDao", UserDao.class);
-
         user1 = new User("gyumee", "박성철", "springno1", Grade.BASIC, 1, 0);
         user2 = new User("leegw700", "이길원", "springno2", Grade.SILVER, 55, 10);
         user3 = new User("bumjin", "박범진", "springno3", Grade.GOLD, 100, 40);
@@ -65,7 +57,7 @@ public class UserDaoTest {
     }
 
     @Test
-    public void count() throws SQLException {
+    public void count(){
         dao.deleteAll();
         assertThat(dao.getCount(), is(0));
 
@@ -87,7 +79,7 @@ public class UserDaoTest {
     }
 
     @Test
-    public void getAll() throws SQLException{
+    public void getAll(){
         dao.deleteAll();
 
         List<User> users0 = dao.getAll();
@@ -111,6 +103,26 @@ public class UserDaoTest {
         checkSameUser(user1, users3.get(1));
         checkSameUser(user2, users3.get(2));
 
+    }
+
+    @Test
+    public void update(){
+        dao.deleteAll();
+
+        dao.add(user1);
+        dao.add(user2);
+
+        user1.setName("오민규");
+        user1.setPassword("springno6");
+        user1.setGrade(Grade.GOLD);
+        user1.setLogin(1000);
+        user1.setRecommend(999);
+        dao.update(user1);
+
+        User user1update = dao.get(user1.getId());
+        checkSameUser(user1, user1update);
+        User user2same = dao.get(user2.getId());
+        checkSameUser(user2, user2same);
     }
 
     private void checkSameUser(User user1, User user2){
