@@ -32,9 +32,9 @@ public class UserDaoTest {
 
     @Before
     public void setUp(){
-        user1 = new User("gyumee", "박성철", "springno1", Grade.BASIC, 1, 0);
-        user2 = new User("leegw700", "이길원", "springno2", Grade.SILVER, 55, 10);
-        user3 = new User("bumjin", "박범진", "springno3", Grade.GOLD, 100, 40);
+        user1 = new User("gyumee", "박성철", "springno1", Grade.BASIC, 1, 0, "test@test.com");
+        user2 = new User("leegw700", "이길원", "springno2", Grade.SILVER, 55, 10, "test11@test.com");
+        user3 = new User("bumjin", "박범진", "springno3", Grade.GOLD, 100, 40, "test22@test.com");
     }
     @Test
     public void addAndGet(){

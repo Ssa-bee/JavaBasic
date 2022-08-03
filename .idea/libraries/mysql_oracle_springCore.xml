@@ -12,6 +12,12 @@
       <root url="jar://$PROJECT_DIR$/lib/org.springframework.expression-3.0.7.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-3.0.7.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/com.springsource.org.junit-4.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-test-3.0.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-tx-3.0.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/com.springsource.javax.activation-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/com.springsource.javax.mail-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-context-support-3.0.7.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
