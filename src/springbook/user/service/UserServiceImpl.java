@@ -58,7 +58,6 @@ public class UserServiceImpl implements UserService{
         mailMessage.setFrom("useradmin@ksug.org");
         mailMessage.setSubject("Upgrade 안내");
         mailMessage.setText("사용자의 등급이 " + user.getGrade().name());
-        System.out.println(this.mailSender + "");
         this.mailSender.send(mailMessage);
     }
 

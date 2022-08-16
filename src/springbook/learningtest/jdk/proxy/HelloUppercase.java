@@ -1,7 +1,9 @@
-package springbook.learningtest.jdk;
+package springbook.learningtest.jdk.proxy;
+
+import org.junit.Test;
 
 public class HelloUppercase implements Hello{
-    Hello hello;
+    private Hello hello;
 
     public HelloUppercase(Hello hello) {
         this.hello = hello;
