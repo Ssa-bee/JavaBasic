@@ -9,7 +9,6 @@ import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.NameMatchMethodPointcut;
 
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -65,7 +64,7 @@ public class HelloTarget implements Hello {
     }
 
     @Test
-    public void pointcutAdvicor() {
+    public void pointcutAdvisor() {
         ProxyFactoryBean pfBean = new ProxyFactoryBean();
         pfBean.setTarget(new HelloTarget());
 
